@@ -9,49 +9,53 @@ namespace StyleCopProcess
 {
     public class StyleCopProcessModel
     {
-        public Dictionary<string, string> _descriptionDictionary = new Dictionary<string, string>()
+        private Dictionary<string, string> _descriptionDictionary = new Dictionary<string, string>()
         {
-            {"SA1001 : CSharp.Spacing : Invalid spacing around the comma.","-1"},
-            {"SA1009 : CSharp.Spacing : Invalid spacing around the closing parenthesis.","-15"},
-            {"SA1020 : CSharp.Spacing : Invalid spacing around the increment or decrement symbol.","-15"},
-            {"SA1025 : CSharp.Spacing : The code contains multiple spaces in a row. Only one space is needed.","-15"},
-            {"SA1000 : CSharp.Spacing : The spacing around the keyword 'for' is invalid.","-3"},
-            {"SA1000 : CSharp.Spacing : The spacing around the keyword 'if' is invalid.","-3"},
-            {"SA1000 : CSharp.Spacing : The spacing around the keyword 'switch' is invalid.","-3"},
-            {"SA1000 : CSharp.Spacing : The spacing around the keyword 'foreach' is invalid.","-3"},
-            {"SA1000 : CSharp.Spacing : The spacing around the keyword 'while' is invalid.","-3"},
-            {"SA1002 : CSharp.Spacing : Invalid spacing around the semicolon.","-15"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '-' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '^' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '&' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '|' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '>>' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '<<' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '&&' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '||' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '==' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '<' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '!=' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '<=' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '>' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '>=' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '=' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '+=' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '-=' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '/=' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '*=' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '>>=' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '<<=' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '&=' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '|=' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '^=' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '+' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '*' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '/' is invalid.","-7"},
-            {"SA1003 : CSharp.Spacing : The spacing around the symbol '%' is invalid.","-7"},
-            {"SA1013 : CSharp.Spacing : Invalid spacing around the closing curly bracket.",""}
+            {"SA1001 : CSharp.Spacing : Invalid spacing around the comma.","空白與空行-1"},
+            {"SA1009 : CSharp.Spacing : Invalid spacing around the closing parenthesis.","空白與空行-15"},
+            {"SA1020 : CSharp.Spacing : Invalid spacing around the increment or decrement symbol.","空白與空行-15"},
+            {"SA1025 : CSharp.Spacing : The code contains multiple spaces in a row. Only one space is needed.","空白與空行-15"},
+            {"SA1000 : CSharp.Spacing : The spacing around the keyword 'for' is invalid.","空白與空行-3"},
+            {"SA1000 : CSharp.Spacing : The spacing around the keyword 'if' is invalid.","空白與空行-3"},
+            {"SA1000 : CSharp.Spacing : The spacing around the keyword 'switch' is invalid.","空白與空行-3"},
+            {"SA1000 : CSharp.Spacing : The spacing around the keyword 'foreach' is invalid.","空白與空行-3"},
+            {"SA1000 : CSharp.Spacing : The spacing around the keyword 'while' is invalid.","空白與空行-3"},
+            {"SA1002 : CSharp.Spacing : Invalid spacing around the semicolon.","空白與空行-15"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '-' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '^' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '&' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '|' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '>>' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '<<' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '&&' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '||' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '==' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '<' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '!=' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '<=' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '>' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '>=' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '=' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '+=' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '-=' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '/=' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '*=' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '>>=' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '<<=' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '&=' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '|=' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '^=' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '+' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '*' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '/' is invalid.","空白與空行-7"},
+            {"SA1003 : CSharp.Spacing : The spacing around the symbol '%' is invalid.","空白與空行-7"},
+            {"SA1013 : CSharp.Spacing : Invalid spacing around the closing curly bracket.","空白與空行"},
+            
+            {"Variable1","變數-1"},
+            {"Variable2","變數-2"},
+            {"Function1","函式-1"},
+            {"ClassDeclaration1","類別宣告-1"}
         };
-
 
         private static int DESCRIPTION_COLUMN = 2;
         private static int UNPROCESS_FILE_NAME_COLUMN = 3;
@@ -78,7 +82,7 @@ namespace StyleCopProcess
                 streamWriter.WriteLine(String.Format("<Project>{0}</Project>", review.Project));
                 streamWriter.WriteLine("<Status>Open</Status>");
                 streamWriter.WriteLine("<Comment>Suggestion</Comment>");
-                streamWriter.WriteLine(String.Format("<Description>空白與空行{0}</Description>", review.Description));
+                streamWriter.WriteLine(String.Format("<Description>{0}</Description>", review.Description));
                 streamWriter.WriteLine("<Severity>Minor</Severity>");
                 streamWriter.WriteLine("<DefectType>Inconsistent coding standard</DefectType>");
                 streamWriter.WriteLine("<InjectedPhase>Implementation</InjectedPhase>");
@@ -90,13 +94,6 @@ namespace StyleCopProcess
             streamWriter.WriteLine(foot);
             streamWriter.Close();
         }
-
-
-        //private List<Review> getMergedReviewList(List<Review> list)
-        //{
-        //    list = list.Distinct(new Comparer<Review>((h1, h2) => h1 == h2)).ToList();
-        //    return list;
-        //}
 
         private List<Review> getReviewList(string warningMessages)
         {
@@ -114,7 +111,7 @@ namespace StyleCopProcess
                 string description = getDescription(warning);
                 string fileName = getFileName(unprocessedFileName);
 
-                if (!fileName.Contains(".Designer.cs"))
+                if (!fileName.Contains(".Designer.cs") || warning.Contains("Variable") || warning.Contains("Function") || warning.Contains("ClassDeclaration"))
                 {
                     Review review = new Review();
                     review.AddDescription(description);
