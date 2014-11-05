@@ -51,10 +51,14 @@ namespace StyleCopProcess
             {"SA1003 : CSharp.Spacing : The spacing around the symbol '%' is invalid.","空白與空行-7"},
             {"SA1013 : CSharp.Spacing : Invalid spacing around the closing curly bracket.","空白與空行"},
             
-            {"Variable1","變數-1"},
-            {"Variable2","變數-2"},
-            {"Function1","函式-1"},
-            {"ClassDeclaration1","類別宣告-1"}
+            {"ALL001 : Variable1","變數-1"},
+            {"ALL001 : Variable2","變數-2"},
+            {"ALL001 : Variable4","變數-4"},
+            {"ALL001 : Function1","函式-1"},
+            {"ALL001 : ClassDeclaration1","類別宣告-1"},
+            {"ALL001 : ClassDeclaration2","類別宣告-2"},
+            {"ALL001 : ClassDeclaration3","類別宣告-3"},
+            {"ALL001 : ClassDeclaration4","類別宣告-4"},
         };
 
         private static int DESCRIPTION_COLUMN = 2;
@@ -111,7 +115,7 @@ namespace StyleCopProcess
                 string description = getDescription(warning);
                 string fileName = getFileName(unprocessedFileName);
 
-                if (!fileName.Contains(".Designer.cs") || warning.Contains("Variable") || warning.Contains("Function") || warning.Contains("ClassDeclaration"))
+                if (!fileName.Contains(".Designer.cs") || warning.Contains("ALL"))
                 {
                     Review review = new Review();
                     review.AddDescription(description);
